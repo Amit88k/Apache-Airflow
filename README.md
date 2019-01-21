@@ -45,4 +45,5 @@ Python and pip (package manager for python packages) as Airflow is written in Py
 5. airflow initdb (Initialize Airflow DataBase)
 6. Check for UI at: http://host_name:8080
 
-# If some errors related to setuptools, upgrade setuptools first or isntall if not already - pip install --upgrade setuptools and now repeat all the above steps.
+# Note 
+If some errors related to setuptools, upgrade setuptools first or isntall if not already - pip install --upgrade setuptools and now repeat all the above steps.
