@@ -21,3 +21,26 @@ So, a DAG is made up of Operators, and together they form a workflow. The DAG de
 2.	Airflow Scheduler: Workflow scheduler is a service that is responsible for the periodic execution of workflows in a reliable and scalable manner. The scheduler is a process that uses DAG definitions in  conjunction with the state of tasks in the metadata database to decide which task need to be executed. The scheduler is generally run as a service.  A daemon built using python-daemon library. Airflow scheduler is more powerful than a cron. 
 3.	Airflow Executor: The Executor is a message queuing process that is tightly bound to the scheduler and determines the worker processes that actually execute each scheduled task. There are many types of Executors, each of which uses a specific class of worker processes to execute tasks. For example, the LocalExecutor executes tasks with parallel processes that run on the same machine as the scheduler process. Other Executors, like the CeleryExecutor execute tasks using worker processes that exists on a separate cluster of worker machines. 
 4.	Airflow Worker: A wrapper on a celery worker when using Celery Executor. Depending on the size of data and number of tasks that need to be run at a given time, you need to decide on an executor. These are the processes that actually execute the logic of tasks, and are determined by the Executor being used 
+
+
+# Steps to install Airflow on Linux Machine
+
+# Prerequisites
+Python and pip (package manager for python packages) as Airflow is written in Python. If you have not installed already follow the following commands. I am working on python 2.7.5 . Airflow id supported on python 3 as well.
+1. sudo yum install python2 (for python 2) or sudo yum install python3 (python 3)
+2. Check if installed -> python --version
+3. Install pip -> yum install python2-pip or yum install python3-pip
+  
+# Steps to install Airflow
+1. pip install apache-airflow 
+	
+  # NOTE: GPL dependency
+    One of the dependencies of Apache Airflow by default pulls in a GPL library (‘unidecode’). In case this is a concern you can force a non GPL library by issuing export SLUGIFY_USES_TEXT_UNIDECODE=yes and then proceed with the normal installation. Please note that this needs to be specified at every upgrade. Also note that if unidecode is already present on the system the dependency will still be used.
+
+2. export AIRFLOW_GPL_UNIDECODE=yes.
+3. export SLUGIFY_USES_TEXT_UNICODE=yes
+4. pip install apache-airflow
+5. airflow initdb (Initialize Airflow DataBase)
+6. Check for UI at: http://host_name:8080
+
+# If some errors related to setuptools, upgrade setuptools first or isntall if not already - pip install --upgrade setuptools and now repeat all the above steps.
