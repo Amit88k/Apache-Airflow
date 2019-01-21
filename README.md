@@ -11,8 +11,10 @@ Workflow management has become such a common need that most companies have multi
 
 # Key terms: 
 •	Directed Acyclic Graph (DAG):     Airflow uses DAGs to represent workflows. A DAG(as name depicts – a graph without cycle) is a collection of tasks that have directional dependencies. Each node in the graph is a task and edges define dependencies amongst tasks. DAGs describe how to run a workflow.
+
 •	Operators:     While DAGs describe how to run a workflow, Operators determine what actually gets done i.e. trigger a certain action. A DAG is made up of Operators. An operator describes a single task in a workflow. 
 So, a DAG is made up of Operators, and together they form a workflow. The DAG defines the sequence and schedule of the operations,  the Operators define discrete tasks that need to take place within this sequence.
+
 •	Tasks: Although the DAG is used to organize tasks and set their execution context, DAGs do not perform any actual computation. Instead, tasks are the element of Airflow that actually “do the work” you want performed. Tasks are generated when instantiating operator objects. The instantiation defines specific values when calling the abstract operator, and the parameterized task becomes a node in a DAG.
 
 # Infrastructure, setup and automation 
