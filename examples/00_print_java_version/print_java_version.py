@@ -48,4 +48,9 @@ t_main = BashOperator(
 ### start the dag as shown in image2.
 ### trigger the dag as shown in image3.
 ### Refresh 
-### you can find the logs as shown in image4, image5, image5 and image7.
+### you can find the logs as shown in image4, image5, image6 and image7.
+### select success in image4.
+### image5 presents you all the instances of the dags_id - print_java_version and
+### select Task_id of which you want to get the logs.
+### image6 contains the task details. Select Log here.
+### image7 contains the logs also print the Java version.
