@@ -47,3 +47,6 @@ Python and pip (package manager for python packages) as Airflow is written in Py
 
 # Note 
 If some errors related to setuptools, upgrade setuptools first or isntall if not already - pip install --upgrade setuptools and now repeat all the above steps.
+
+### References
+1. https://airflow.apache.org/ 
