@@ -1,17 +1,17 @@
 ### Exploring how PostgreSQL is benefiting here. 
 
-###After running the sample sample pipeline,
+### After running the sample sample pipeline,
 1. go to PostgreSQL cli 
 	$ psql -U postgres
 	
 2. list all the databases 
-	# \l
+	### \l
 	
 3. connect to the database which we have set in the AIRFLOW_HOME/airflow.cfg 
-	# \c sample_database
+	### \c sample_database
 	
 4. verify the tables created
-	# \d
+	### \d
 	
 In postgres_images directory : 
 5. localExecutor-airflow-cfg.png contains the information about the modification in AIRFLOW_HOME/airflow.cfg i.e. information about the executor and sql_alchemy_conn.

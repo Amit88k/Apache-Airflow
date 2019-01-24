@@ -1,4 +1,4 @@
-### installing PostgreSQL on centos
+### Installing PostgreSQL on centos
 
 1. Install the postgresql-server and the contrib package, which provide you some additional utilities and functionalities:
 	$ sudo yum install postgresql-server postgresql-contrib
@@ -30,7 +30,7 @@ NOTE: You can use the following command to get the location of config file:
 
 	OR 
 	
-	if the above command throws an error, you can do :
+	If the above command throws an error, you can do :
 	$ psql -U postgres
 	
 8. Now, either you can set PostgreSQL to start on booting as : 
@@ -38,7 +38,7 @@ NOTE: You can use the following command to get the location of config file:
 	
 	OR 
 	
-	follow the following step every time :
+	Follow the following step every time :
 		1. start PostgreSQL-server, using following command :
 			$ systemctl restart postgresql
 			
