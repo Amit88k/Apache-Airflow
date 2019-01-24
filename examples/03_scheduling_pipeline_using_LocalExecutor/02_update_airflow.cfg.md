@@ -9,6 +9,14 @@ In AIRFLOW_HOME/airflow.cfg
 3. reset sql_alchemy_conn property to:
 	 sql_alchemy_conn = postgresql+psycopg2://postgres:@127.0.0.1:5432/sample_database
 	 
+### above connection for project database:
+	A connection type of Postgres.
+	A connection identifier of users (postgres).
+	A host string of 127.0.0.1.
+	PostgreSQL Port - 5432
+	A schema string (database name) of sample_database.
+	A login of postgres (default).
+	 
 4. Restart airflow db: 
 	 airflow initdb
 	 
