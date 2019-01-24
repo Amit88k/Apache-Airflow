@@ -30,7 +30,7 @@ So, the core concepts are quite simple: workflows are called DAGs, workflow step
 3.	Airflow Executor: The Executor is a message queuing process that is tightly bound to the scheduler and determines the worker processes that actually execute each scheduled task. There are many types of Executors, each of which uses a specific class of worker processes to execute tasks. For example, the LocalExecutor executes tasks with parallel processes that run on the same machine as the scheduler process. Other Executors, like the CeleryExecutor execute tasks using worker processes that exists on a separate cluster of worker machines. 
 4.	Airflow Worker: A wrapper on a celery worker when using Celery Executor. Depending on the size of data and number of tasks that need to be run at a given time, you need to decide on an executor. These are the processes that actually execute the logic of tasks, and are determined by the Executor being used 
 
-### Steps to install Airflow on Linux Machine
+### Steps to install Airflow on Linux
 
 #### Prerequisites
 Python and pip (package manager for python packages) as Airflow is written in Python. If you have not installed already follow the following commands. I am working on python 2.7.5 . Airflow id supported on python 3 as well.
