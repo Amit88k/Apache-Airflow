@@ -22,6 +22,8 @@ In AIRFLOW_HOME/airflow.cfg
 	 
 Now, your set up is ready. 
 
+Now you can run any of the dags, your dags will using local executors.
+
 NOTE: PORT 5432 for postgresql is set in  var/lib/pgsql/data/postgresql.conf.
 
 
