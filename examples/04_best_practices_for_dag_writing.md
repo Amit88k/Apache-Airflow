@@ -13,3 +13,15 @@ The DAG must appear in globals() scope. Airflow loads dags with global scope onl
 	my_function()
 	
 Sometimes it can be useful to put a dag in local scope. For example, a common pattern with SubDagOperator define inside a function so that Airflow doesn't try to load it as a standalone DAG.
+
+#### 2. start_date
+It is recommended to use constants for start_date parameter, because dynamic ones would act unpredictable based on with your airflow pipleline is evaluated by the scheduler.
+
+link : https://airflow.apache.org/faq.html#what-s-the-deal-with-start-date
+
+
+
+
+
+
+
