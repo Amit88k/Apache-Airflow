@@ -1,5 +1,14 @@
 Before writing a dag, one should know the following concepts.
 
+#### Operators
+While DAGs describe how to run a workflow, Operators determine what actually gets done.
+
+An operator describes a single task in a workflow. Usually, operators are atmoic i.e. they can stand their own and don't need to share resources with other operators. It's DAG's responsibility to make sure that operators run in the correct order. Generally, operators run independently. 
+
+###### NOTE
+In general, if two operators need to share information, like   
+
+
 ## 1. Default Arguments
 A dictionary of default_arguments can be passed to a DAG, to overwrite default values of the DAG arguments. It can be applied to any of its operators. This is a way to apply common parameters to many operators without having to specify for each DAG.
 #### example
@@ -54,4 +63,4 @@ priority weight of a task against other tasks. This allows the executor to trigg
 #### pool (str) 
 a slot pool in which a task should run. Slot pools are a way to limit cincurrency for certain tasks.
 
- 
+#### 
